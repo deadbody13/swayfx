@@ -4,7 +4,7 @@
 ### First install all required dependencies and download the source code
 
 ```bash
-sudo apt install meson wayland-protocols wayland libpcre2-dev libjson-c-dev libpango-1.0-0 libcairo2-dev wget
+sudo apt install meson wayland-protocols libpcre2-dev libjson-c-dev libpango-1.0-0 libcairo2-dev wget cmake libwayland-dev libdrm-dev libxkbcommon-dev libudev-dev libegl-dev libgbm-dev libvulkan-dev libgles2-mesa-dev libinput-dev libxcb-dri3-dev libseat-dev hwdata libpango1.0-dev
 ```
 
 ### Next setup the build enviroment
@@ -33,7 +33,7 @@ You MUST compile wlroots first.
 ```bash
 cd wlroots-0.16.2
 meson setup build/
-ninja -C build/
+sudo ninja -C build/ install
 ```
 
 Now to compile swayfx.
